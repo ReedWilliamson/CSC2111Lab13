@@ -1,7 +1,7 @@
 AutomatedMakefile = am
 CC = g++
 
-FILES = DrawHeapSkew.o
+FILES = HeapDriver.o
 EXECUTABLE = HeapDriver.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
@@ -21,10 +21,10 @@ all: Project
 Project: 		$(FILES)
 			$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)
 
-#HeapDriver.o:	BinaryTree.h BinaryTreeIterator.h HeapSkew.h HeapDriver.cpp
-#				$(COMPILE) HeapDriver.cpp
+HeapDriver.o:	BinaryTree.h BinaryTreeIterator.h HeapSkew.h HeapDriver.cpp
+				$(COMPILE) HeapDriver.cpp
 				
-DrawHeapSkew.o:	TreeNode.h BinaryTree.h BinaryTreeIterator.h HeapSkew.h DrawHeapSkew.cpp
-				$(COMPILE) DrawHeapSkew.cpp
+#DrawHeapSkew.o:	TreeNode.h BinaryTree.h BinaryTreeIterator.h HeapSkew.h DrawHeapSkew.cpp
+#				$(COMPILE) DrawHeapSkew.cpp
 
 
